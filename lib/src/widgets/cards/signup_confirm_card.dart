@@ -110,6 +110,7 @@ class _ConfirmSignupCardState extends State<_ConfirmSignupCard>
       SignupData.fromSignupForm(
         name: auth.email,
         password: auth.password,
+        inviteCode: auth.inviteCode,
         termsOfService: auth.getTermsOfServiceResults(),
       ),
     );

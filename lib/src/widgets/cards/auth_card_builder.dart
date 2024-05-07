@@ -46,6 +46,7 @@ class AuthCard extends StatefulWidget {
     this.loginAfterSignUp = true,
     this.hideProvidersTitle = false,
     this.additionalSignUpFields,
+    this.enableInviteCode = false,
     this.disableCustomPageTransformer = false,
     this.loginTheme,
     this.navigateBackAfterRecovery = false,
@@ -71,6 +72,7 @@ class AuthCard extends StatefulWidget {
 
   final List<UserFormField>? additionalSignUpFields;
 
+  final bool enableInviteCode;
   final bool disableCustomPageTransformer;
   final LoginTheme? loginTheme;
   final bool navigateBackAfterRecovery;
@@ -381,6 +383,7 @@ class AuthCardState extends State<AuthCard> with TickerProviderStateMixin {
             hideProvidersTitle: widget.hideProvidersTitle,
             introWidget: widget.introWidget,
             initialIsoCode: widget.initialIsoCode,
+            enableInviteCode: widget.enableInviteCode,
           ),
         );
       case _recoveryIndex:

@@ -130,6 +130,13 @@ class Auth with ChangeNotifier {
     notifyListeners();
   }
 
+  String _inviteCode = '';
+  String get inviteCode => _inviteCode;
+  set inviteCode(String inviteCode) {
+    _inviteCode = inviteCode;
+    notifyListeners();
+  }
+
   Map<String, String>? _additionalSignupData;
   Map<String, String>? get additionalSignupData => _additionalSignupData;
   set additionalSignupData(Map<String, String>? additionalSignupData) {

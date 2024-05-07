@@ -297,6 +297,7 @@ class FlutterLogin extends StatefulWidget {
     this.footer,
     this.hideProvidersTitle = false,
     this.additionalSignupFields,
+    this.enableInviteCode = false,
     this.disableCustomPageTransformer = false,
     this.navigateBackAfterRecovery = false,
     this.termsOfService = const <TermOfService>[],
@@ -405,6 +406,9 @@ class FlutterLogin extends StatefulWidget {
   /// Disable the page transformation between switching authentication modes.
   /// Fixes #97 if disabled. https://github.com/NearHuscarl/flutter_login/issues/97
   final bool disableCustomPageTransformer;
+
+  /// 注册时显示邀请码
+  final bool enableInviteCode;
 
   /// Navigate back to the login screen after recovery of password.
   final bool navigateBackAfterRecovery;
@@ -848,6 +852,7 @@ class _FlutterLoginState extends State<FlutterLogin>
                         loginAfterSignUp: widget.loginAfterSignUp,
                         hideProvidersTitle: widget.hideProvidersTitle,
                         additionalSignUpFields: widget.additionalSignupFields,
+                        enableInviteCode:widget.enableInviteCode,
                         disableCustomPageTransformer:
                             widget.disableCustomPageTransformer,
                         loginTheme: widget.theme,
